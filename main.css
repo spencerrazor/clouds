@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
+
 
 .banner{
     position: relative;
-    width: 100%;
+    min-width: 100vw;
     height: 100vh;
     background: url(images/bg.jpg);
     background-size: cover;
@@ -23,10 +25,13 @@
     font-size: 10vw;
     color: #fff;
     text-shadow: 2px 2px 5px black;
+    text-align: center;
+    z-index: 10;
 
 }
 
 .banner .clouds{
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -40,6 +45,7 @@
     bottom: 0;
     max-width: 100%;
     animation: animate calc(10s * var(--i)) linear alternate infinite;
+    ;
 }
 
 @keyframes animate{
@@ -60,4 +66,28 @@ section{
     padding: 75px 100px;
     color: white;
     background-color: black;
+    height: 50vh;
+    overflow: hidden;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.contact {
+    position: relative;
+    padding: 20px 100px;
+    color: white;
+    background-color: black;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.motto {
+    font-size: 3vw;
+    color: white;
+    z-index: 10px;
+}
+
+.emp {
+    font-size: 3vw;
+    color: grey;
 }
